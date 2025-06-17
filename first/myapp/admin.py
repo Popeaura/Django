@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ToolItem
+from .models import TodoItem
 
 # Register your models here.
-admin.site.register(ToolItem)
+admin.site.register(TodoItem)
