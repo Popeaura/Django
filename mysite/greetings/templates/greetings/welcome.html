@@ -9,13 +9,37 @@
     <h1>hello ,my name is {{name}}</h1>
     <p>This my Django tamplate !</p>
     <h2>These are my hobbies</h2>
+
+    {% if hobbies %}
     <ul>
-        {% for hobby in hobbies%}
-        <li>{{hobby}}</li>
-        {% empty %}
-        <li>No hobbie to show</li>
+        {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
         {% endfor %}
     </ul>
-    
+    {% else %}
+    <p>No hobbies to show.</p>
+    {% endif %}
+
+    {% if name == "Gray" %}
+    <p>Hello Kyler Gray</p>
+    {% elif name == "Odek" %}
+    {% else %}
+    <p>Welcome guests</p>
+    {% endif %}
+
+    {% if hobbies|length > 3 %}
+    <p>Wow you got alot of hobbies !</p>
+    {% else %}
+    <p>Your hobbies sounds interesting</p>
+    {% endif %}
+    <p>Who is the best {{ name|upper}}</p>
+
+    <ul>
+    {% for hobby in hobbies %}
+        <li>{{ forloop.counter }}. {{ hobby }}</li>
+    {% endfor %}
+    </ul>
+
+
 </body>
 </html>
