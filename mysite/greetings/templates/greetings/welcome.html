@@ -11,11 +11,7 @@
     <h2>These are my hobbies</h2>
 
     {% if hobbies %}
-    <ul>
-        {% for hobby in hobbies %}
-            <li>{{ hobby }}</li>
-        {% endfor %}
-    </ul>
+    {% include "greetings/hobby_list.html" %}
     {% else %}
     <p>No hobbies to show.</p>
     {% endif %}
@@ -34,6 +30,7 @@
     {% endif %}
     <p>Who is the best {{ name|upper}}</p>
 
+   
    
 
 

@@ -10,7 +10,9 @@
     {% for hobby in hobbies %}
         <li>{{forloop.counter}}. {{ hobby }}</li>
     {% endfor %}
-</ul>
-
+    </ul>
+    {%with total =hobbies|length %}
+    <p>You have {{total}} hobbies interesting !</p>
+    {% endfor %}
 </body>
 </html>
