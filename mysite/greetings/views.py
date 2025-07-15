@@ -7,4 +7,4 @@ def welcome(request):
         'name':'Kyler Gray',
         'hobbies':['coding','video games','Music', 'Travelling' ]
     }
-    return render (request, 'greetings/welcome.html,context')
+    return render (request, 'greetings/welcome.html',context)
