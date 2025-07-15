@@ -8,12 +8,12 @@
 <body>
     <ul>
     {% for hobby in hobbies %}
-        <li>{{forloop.counter}}. {{ hobby }}</li>
+        <li>{{forloop.counter}} {{ hobby }}</li>
     {% endfor %}
     </ul>
 
-    {%with total =hobbies|length %}
-    <p>You have {{total}} hobbies interesting !</p>
-    {% {% endwith %} %}
+    {% with total=hobbies|length %}
+    <p>You have {{ total }} hobbies Interesting!</p>
+    {% endwith %}   
 </body>
 </html>
