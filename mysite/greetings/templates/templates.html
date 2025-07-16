@@ -7,6 +7,13 @@
 </head>
 <body>
     <h1>All Messages</h1>
-    
+    <ul> 
+        {% for Message in Messages  %}
+        <li><strong>{{Message.sender}}</strong>:{{Message.text}} <em>
+            ({{Message.sent_at}})</em> </li>
+            {%empty%}
+            <li>No Messages sent yet.</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
