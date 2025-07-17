@@ -3,4 +3,6 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def welcome(request)
+def welcome(request):
+    
+    return HttpResponse('Welcome to Week two !')
