@@ -8,5 +8,16 @@
 <body>
    <h1>Hello {{name}}</h1> 
    <p>This is week two welcome to week two with templates</p>
+
+   <p>I have heard alot about you i heard these are your hobbies</p>
+   <h2>Hobbies</h2>
+    <ul>
+        {% for hobby in hobbies %}
+        <li>{{hobby}}</li>
+        {%empty%}
+        <p>About your hobbies, that i am not sure yet</p>
+        {% endfor %}
+    </ul>
+
 </body>
 </html>
