@@ -4,5 +4,7 @@ from django.http import HttpResponse
 
 
 def welcome(request):
-    context = {'name':'Django Guru'}
+    context = {'name':'Django Guru',
+               'hobbies':['coding', 'music', 'gaming']
+               }
     return render(request, 'greetings/welcome.html' , context)
