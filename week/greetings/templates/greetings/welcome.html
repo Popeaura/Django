@@ -13,7 +13,7 @@
    <h2>Hobbies</h2>
     <ul>
         {% for hobby in hobbies %}
-        <li>{{hobby}}</li>
+        <li>{{forloop.counter}}{{hobby}}</li>
         {%empty%}
         <p>About your hobbies, that i am not sure yet</p>
         {% endfor %}
