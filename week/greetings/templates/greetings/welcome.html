@@ -21,5 +21,15 @@
     {% if name == 'Django Guru' %}
     <p>I know you are a shifu in this </p>
     {% endif %}
+
+    <h2>Messages</h2>
+<ul>
+    {% for message in messages %}
+        <li><strong>{{ message.sender }}</strong>: {{ message.text }} <em>({{ message.sent_at }})</em></li>
+    {% empty %}
+        <li>No messages yet.</li>
+    {% endfor %}
+</ul>
+
 </body>
 </html>
