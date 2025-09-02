@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Messages</title>
+</head>
+<body>
+    <h1>All Messages</h1>
+    <ul>
+        {% for msg in messages %}
+            <li><strong>{{ msg.sender }}</strong>: {{ msg.text }}</li>
+        {% empty %}
+            <li>No messages yet.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
