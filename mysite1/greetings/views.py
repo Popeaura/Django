@@ -1,10 +1,16 @@
-from django.shortcuts import render
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 from .models import Doctor, Patient
+from .serializers import DoctorSerializer, PatientSerializer
 
+@api_view(['GET'])
 def patients_list(request):
     patients = Patient.objects.all()
-    return render(request, "greetings/patients_list.html", {"patients": patients})
+    serializer = PatientSerializer(patients, many=True)
+    return Response(serializer.data)
 
+@api_view(['GET'])
 def doctors_list(request):
     doctors = Doctor.objects.all()
-    return render(request, "greetings/doctors_list.html", {"doctors": doctors})
+    serializer = DoctorSerializer(doctors, many=True)
+    return Response(serializer.data)    
