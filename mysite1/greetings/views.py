@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Message  
+from .models import Doctor, Patient
 
 def welcome(request):
     messages = Message.objects.all()
