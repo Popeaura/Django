@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctors</title>
+</head>
+<body>
+    <h1>Doctors</h1>
+    {% if doctors %}
+        <ul>
+        {% for doctor in doctors %}
+            <li>{{ doctor.name }} ({{ doctor.specialty }}) - {{ doctor.email }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No doctors available.</p>
+    {% endif %}
+</body>
+</html>

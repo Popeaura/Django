@@ -16,10 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from greetings import views
 
 urlpatterns = [
-    path('patients/', views.patients_list, name='patients_list' ),
-    path('doctors/', views.doctors_list, name='doctors_list' ),
     path('admin/', admin.site.urls),
+    path('', include('greetings.urls')),  # delegate to greetings app
 ]
