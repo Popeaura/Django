@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from greetings import views
 
 urlpatterns = [
     path('patients/', views.patients_list, name='patients_list' ),
